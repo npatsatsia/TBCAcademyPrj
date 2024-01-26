@@ -1,0 +1,199 @@
+.page-title-container {
+    width: 100%;
+    padding-top: 84px;
+}
+
+.page-title-container .image-container img {
+    width: 100%;
+    height: 356px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    vertical-align: top;
+}
+
+.page-title-container .title-container {
+    position: absolute;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 140px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-weight: 800;
+    z-index: 1;
+}
+
+.page-title-container .title-container:first-child {
+    font-size: 42px;
+    color: var(--text-normal);
+}
+
+.page-title-container .title-container:last-child {
+    font-size: 34px;
+    color: var(--text-normal);
+}
+
+.page-about-info {
+    background-color: var(--bg-color-1);
+    padding: 50px 25%;
+    font-size: 33px;
+}
+
+.page-about-info:first-child span {
+    font-size: 28px;
+    color: var(--text-normal);
+}
+
+.page-about-info :nth-child(2) {
+    font-size: 24px;
+    color: var(--text-more);
+    text-decoration: none;
+    display: inline-block;
+    padding-top: 35px;
+    font-weight: 600;
+}
+
+
+@media (min-width: 320px) {
+    .page-title-container .title-container {
+        left: 5%;
+        gap: 6px;
+    }
+    .page-title-container .image-container img {
+        height: 217px;
+    }
+    .page-title-container .title-container :first-child {
+        font-size: 22px;
+    }
+    .page-title-container .title-container :last-child {
+        font-size: 18px;
+    }
+    .page-about-info {
+        padding: 40px 5%;
+        font-size: 18px;
+    }
+    .page-about-info :nth-child(2) {
+        font-size: 16px;
+        padding-top: 22px;
+    }
+}
+
+@media (min-width: 768px) {
+    .page-title-container .title-container {
+        left: 10%;
+        top: 155px;
+        gap: 15px;
+    }
+    .page-title-container .image-container img {
+        height: 267px;
+    }
+    .page-title-container .title-container :first-child {
+        font-size: 28px;
+    }
+    .page-title-container .title-container :last-child {
+        font-size: 22px;
+    }
+    .page-about-info {
+        padding: 45px 10%;
+        font-size: 22px;
+        min-height: 345px;
+    }
+    .page-about-info :nth-child(2) {
+        font-size: 20px;
+        padding-top: 26px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-title-container .title-container {
+        left: 15%;
+        top: 175px;
+        gap: 20px;
+    }
+    .page-title-container .image-container img {
+        height: 297px;
+    }
+    .page-title-container .title-container :first-child {
+        font-size: 34px;
+    }
+    .page-title-container .title-container :last-child {
+        font-size: 28px;
+    }
+    .page-about-info {
+        padding: 48px 12%;
+        font-size: 26px;
+        min-height: 393px;
+    }
+    .page-about-info :nth-child(2) {
+        font-size: 24px;
+        padding-top: 28px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .page-title-container .title-container {
+        left: 20%;
+        top: 175px;
+        gap: 20px;
+    }
+    .page-title-container .image-container img {
+        height: 320px;
+    }
+    .page-title-container .title-container :first-child {
+        font-size: 42px;
+    }
+    .page-title-container .title-container :last-child {
+        font-size: 32px;
+        font-weight: 600;
+    }
+    .page-about-info {
+        padding: 50px 15%;
+        font-size: 28px;
+    }
+    .page-about-info :nth-child(2) {
+        font-size: 24px;
+        padding-top: 30px;
+    }
+}
+
+/* @media screen and (max-width: 800px) {
+    .page-title-container .image-container img {
+        height: 307px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page-title-container .title-container {
+        gap: 12px;
+        top: 140px;
+
+    }
+    
+}
+
+@media screen and (max-width: 584px) {
+    .page-title-container .image-container img {
+        height: 230px;
+    }
+    .page-title-container .title-container {
+        left: 10%;
+    }
+
+    .page-title-container .title-container:first-child {
+        font-size: 28px;
+    }
+    .page-title-container .title-container:last-child {
+        font-size: 24px;
+    }
+
+    .page-about-info {
+        padding: 50px 10%;
+        font-size: 22px;
+    }
+    .page-about-info :nth-child(2) {
+        font-size: 20px;
+    }
+
+} */

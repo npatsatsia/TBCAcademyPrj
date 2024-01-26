@@ -1,0 +1,139 @@
+footer {
+    width: 100%;
+    background-color: var(--bg-edge);
+    height: 250px;
+}
+.footer-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 15px;
+}
+
+.bank-logo-container {
+    grid-column: 1;
+    grid-row: 1 / 2;
+}
+.contact-socials {
+    grid-column: 1;
+    grid-row: 2 / 3;
+}
+.rights {
+    grid-column: 1;
+    grid-row: 3 / 4;
+}
+.terms-conditions {
+    grid-column: 1;
+    grid-row: 4 / 5;
+}
+.contact-socials {
+    flex-direction: row;
+}
+
+.contact-socials {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.contact-socials .socials {
+    order: 2;
+    display: flex;
+    gap: 10px;
+}
+
+.terms-conditions a {
+    text-decoration: none;
+    color: var(--text-normal);
+    font-size: 18px;
+    transition: color 0.3s ease-in;
+}
+
+.terms-conditions a:hover {
+    color: var(--hover);
+    transition: color 0.3s ease-in;
+}
+
+.rights span {
+    font-size: 18px;
+}
+
+.contact-socials .help {
+    background-color: var(--btn-color);
+    transition: background-color 0.4s ease-in;
+    width: 160px;
+    height: 39px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contact-socials .help a {
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--text-normal);
+}
+
+.contact-socials .help:hover {
+    background-color: var(--hover2);
+    transition: background-color 0.4s ease-out;
+}
+.contact-socials .help:hover a{
+    color: var(--hover);
+}
+
+@media (min-width: 320px) {
+    .footer-container {
+        padding: 40px 5%;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        padding: 40px 10%;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+    }
+
+    .bank-logo-container {
+        grid-column: 1 / 2;
+        grid-row: 1;
+    }
+    .contact-socials {
+        flex-direction: column;
+        gap: 50px;
+        grid-column: 2 ;
+        grid-row: 1 / 4 ;
+    }
+    .terms-conditions {
+        grid-column: 1 ;
+        grid-row: 3 ;
+    }
+    .rights {
+        grid-column: 1 ;
+        grid-row: 2 ;
+    }
+    
+    .contact-socials .socials {
+        order: 0;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .footer-container {
+        padding: 40px 10%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .footer-container {
+        padding: 40px 15%;
+    }
+}
