@@ -17,11 +17,11 @@ class Footer {
                     <a href="#">მოგვწერეთ</a>
                 </div>
             </div>
-            <div class="rights">
-                <span>© 2023 ყველა უფლება დაცულია</span>
-            </div>
             <div class="terms-conditions">
                 <a href="#">წესები და პირობები</a>
+            </div>
+            <div class="rights">
+                <span>© 2023 ყველა უფლება დაცულია</span>
             </div>
         </div>
             `;

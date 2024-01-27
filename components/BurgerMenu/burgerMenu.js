@@ -28,7 +28,6 @@ class BurgerMenu {
             this.menuOpen = false;
 
 
-
             if (this.burgerMenuLines.length > 0) {
                 for (const line of this.burgerMenuLines) {
                     line.addEventListener('click', this.toggleMenu.bind(this));
@@ -37,10 +36,9 @@ class BurgerMenu {
                     this.handleClickOutside(event);
                 });
             }
+
         });
     }
-
-    // აქ ვერ დავასეთაფე ის, რომ როდეცა ინსპექტიდან რეზოლუციას ვზრდი open კლასები არ შორდება
 
 
     toggleMenu() {
@@ -49,6 +47,9 @@ class BurgerMenu {
         if (this.menuOpen && this.burgerMenu) {
             this.burgerMenu.classList.toggle('open', this.burgerMenu);
             this.menu.classList.toggle("open", this.menuOpen)
+            document.querySelector('.burger-menu-lines .burger-line:first-child .half-line').style.transform = "rotate(-135deg) translateX(7px) translateY(-7px)";
+            document.querySelector('.burger-menu-lines .burger-line:last-child .half-line').style.transform = "rotate(-135deg) translateX(-7px) translateY(6px)";            
+            document.querySelector('.burger-menu-lines .burger-line .full-line').style.transform = "rotate(-45deg)";
         } else {
             document.body.style.transition = 'none';
             document.body.style.backgroundColor = '';
@@ -68,6 +69,9 @@ class BurgerMenu {
         if (this.burgerMenu) {
             this.burgerMenu.classList.remove('open');
             this.menu.classList.remove('open');
+            document.querySelector('.burger-menu-lines :first-child .half-line').style.transform = "rotate(0)";
+            document.querySelector('.burger-menu-lines :last-child .half-line').style.transform = "rotate(0)";
+            document.querySelector('.burger-menu-lines .burger-line .full-line').style.transform = "rotate(0)"
         }
     }
 
@@ -86,11 +90,6 @@ class BurgerMenu {
         burgerMenuDiv.className = 'burger-menu-container';
         burgerMenuDiv.innerHTML = `
             <link rel="stylesheet" href="components/BurgerMenu/burgerMenu.css">
-            <div class="burger-menu-lines">
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-            </div>
         `;
         return burgerMenuDiv;
     }

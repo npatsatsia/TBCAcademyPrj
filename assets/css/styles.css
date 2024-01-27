@@ -9,7 +9,7 @@
     --bg-color-2: #161616;
     --bg-edge: #1A1E1F;
     --bg-burger: rgb(34, 34, 34);
-    --burger-line: #767676;
+    --burger-line: #DBDBDB;
     --trans-black: rgba(0, 0, 0, 0.5);
     --text-light: #F4F4F4;
     --text-selected: #00A3E0;
@@ -17,13 +17,31 @@
     --text-more: #00AEF3;
     --text-more2: #00AEEF;
     --btn-color: #00AEEF;
-    --hover: #808080;
+    --hover: #131111;
     --hover2: lightgray;
     --border: rgba(85, 85, 85, 1);
+    --dots: #F4F4F4
 }
 
 body {
     width: 100%;
     color: var(--text-light);
     font-family: 'Archivo', sans-serif;
+}
+
+header,
+section,
+footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    header,
+    section,
+    footer {
+        min-width: 320px;
+    }
 }

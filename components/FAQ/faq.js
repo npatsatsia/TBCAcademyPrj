@@ -21,6 +21,7 @@ class FAQSection {
     
     render() {
         const FAQSection = document.createElement('section');
+        FAQSection.id = "FAQ-section"
         FAQSection.innerHTML = `
             <link rel="stylesheet" href="components/FAQ/faq.css">
             <div class="FAQ-container">

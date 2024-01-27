@@ -6,23 +6,8 @@ class CoursesSection {
     }
 
     render() {
-        // const coursesSection = document.getElementById('courses-section');
-        // const coursesList = coursesSection.querySelector('.courses-ul');
-
-        // this.coursesArray.forEach(course => {
-        //     const listItem = document.createElement('li');
-        //     listItem.innerHTML = `
-        //         <img src="${course.image}" alt="${course.courseTitle}">
-        //         <h3>${course.courseTitle}</h3>
-        //         <p>${course.registrationPeriod}</p>
-        //         <p>${course.details}</p>
-        //     `;
-        //     coursesList.appendChild(listItem);
-        // });
-
-        
         const coursesElement = document.createElement('section');
-        coursesElement.id = 'courses-section'
+        coursesElement.id = "courses-section"
         coursesElement.innerHTML = `
             <link rel="stylesheet" href="components/Courses/courses.css">
             <div class="courses-container">

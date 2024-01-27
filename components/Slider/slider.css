@@ -1,0 +1,131 @@
+#slider-section {
+    position: relative;
+    width: 100%;
+    background-color: var(--bg-color-1);
+}
+
+.slider-section-container {
+    width: 1024px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider-title {
+    font-size: 26px;
+    color: var(--text-normal);
+    align-self: flex-start;
+}
+
+.slider-container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.slider-arrow-container.left {
+    position: absolute;
+    left: -100px;
+    bottom: 140px;
+}
+.slider-arrow-container.right {
+    position: absolute;
+    right: -100px;
+    bottom: 140px;
+}
+
+.slider-arrow-container svg {
+    width: 30px;
+    height: 30px;
+    stroke: 5px;
+    fill: var(--hover2);
+    position: absolute;
+    cursor: pointer;
+}
+
+.slider-arrow-container svg:hover {
+    fill: var(--hover);
+}
+
+.slider-arrow-container.left svg {
+    left: 3%;
+    top: 49%;
+}
+
+.slider-arrow-container.right svg{
+    transform: rotate(180deg);
+    right: 3%;
+    top: 49%;
+}
+
+.images-container{
+    display: flex;
+    align-items: center;
+}
+
+
+.partners-trio1,
+.partners-trio2,
+.partners-single {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.7s ease-in;
+}
+.partners-single{
+    justify-content: center;
+}
+
+.opacity1 {
+    opacity: 1;
+    transition: opacity 0.7s ease-out;
+}
+
+.slider-dots {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 80px;
+}
+.slider-dots > div {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--dots);
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .slider-section-container {
+        width: 94%;
+    }
+}
+@media (max-width: 768px) {
+    .slider-section-container {
+        height: 500px;
+        justify-content: space-between;
+    }
+    .sldier-container {
+        height: 100%;
+    }
+    .images.container {
+        height: 100%;
+    }
+    .partners-trio1,
+    .partners-trio2,
+    .partners-single {
+        flex-direction: column;
+        gap: 25px;
+        height: 100%;
+    }
+}

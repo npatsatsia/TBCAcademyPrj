@@ -15,17 +15,22 @@
     
                 if (prevScrollPos > currentScrollPos) {
 
-                    document.querySelector('.header-container').style.backgroundColor = "rgba(26,30,31, 0.9)";
-                    document.querySelector('.header-container').style.display = 'flex';
-                } else {
+                    document.querySelector('header').style.backgroundColor = "rgba(26,30,31, 1)";
 
-                    document.querySelector('.header-container').style.backgroundColor = "rgba(26,30,31)";
-                    document.querySelector('.header-container').style.display = 'none';
+                    if (window.innerWidth < 768) {
+                        document.querySelector('header').style.display = 'flex';
+                    }
+                } else {
+                    document.querySelector('header').style.backgroundColor = "rgba(26,30,31)";
+
+                    if (window.innerWidth < 768) {
+                        document.querySelector('header').style.display = 'none';
+                    }
                 }
                 if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    document.querySelector('.header-container').style.backgroundColor = "rgba(26,30,31, 0.8)";
+                    document.querySelector('header').style.backgroundColor = "rgba(26,30,31, 0.9)";
                 } else {
-                    document.querySelector('.header-container').style.backgroundColor = "rgba(26,30,31)";
+                    document.querySelector('header').style.backgroundColor = "rgba(26,30,31)";
                 }
     
                 prevScrollPos = currentScrollPos;
@@ -76,9 +81,15 @@
                         </ul>
                     </nav>
                     <div class="burger-menu-lines">
-                        <div class="burger-line"></div>
-                        <div class="burger-line"></div>
-                        <div class="burger-line"></div>
+                        <div class="burger-line">
+                            <div class="half-line"></div>
+                        </div>
+                        <div class="burger-line">
+                            <div class="full-line"></div>
+                        </div>
+                        <div class="burger-line">
+                            <div class="half-line"></div>
+                        </div>
                     </div>
                 </div>
                 `;
