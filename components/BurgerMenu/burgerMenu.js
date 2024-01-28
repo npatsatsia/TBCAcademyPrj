@@ -50,6 +50,8 @@ class BurgerMenu {
             document.querySelector('.burger-menu-lines .burger-line:first-child .half-line').style.transform = "rotate(-135deg) translateX(7px) translateY(-7px)";
             document.querySelector('.burger-menu-lines .burger-line:last-child .half-line').style.transform = "rotate(-135deg) translateX(-7px) translateY(6px)";            
             document.querySelector('.burger-menu-lines .burger-line .full-line').style.transform = "rotate(-45deg)";
+
+            document.body.classList.add('limited-scroll');
         } else {
             document.body.style.transition = 'none';
             document.body.style.backgroundColor = '';
@@ -62,8 +64,11 @@ class BurgerMenu {
     closeMenu() {
         this.menuOpen = false;
 
+        
+
         if (this.menu.parentElement) {
             document.body.style.overflow = '';
+            document.body.classList.remove('limited-scroll');
         }
 
         if (this.burgerMenu) {
