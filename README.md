@@ -39,7 +39,7 @@
 
   ### Burger Menu (Screen Width ≤ 768px)
 
-  On screens with a width of 768 pixels or less, [Your Project Name] dynamically transforms the navigation experience. A sleek and intuitive burger menu appears, gracefully animating onto the screen.
+  On screens with a width of 768 pixels or less, [TBCAcademyPrj] dynamically transforms the navigation experience. A sleek and intuitive burger menu appears, gracefully animating onto the screen.
   Upon clicking the burger icon, the menu elegantly slides in from the right, providing easy access to navigation options. This responsive design ensures a streamlined and user-friendly interaction, especially on smaller devices where space is limited.
 
   ### Partner Carousel
