@@ -76,8 +76,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    opacity: 0;
-    transition: opacity 0.7s ease-in;
 }
 .images-container .partners-trio1 img {
     width: 230px;
@@ -86,10 +84,25 @@
     justify-content: center;
 }
 
-.opacity1 {
+
+.images-container > div.middle {
     opacity: 1;
-    transition: opacity 0.7s ease-out;
+    transition: opacity 0.7s ease-in;
+
 }
+
+.images-container > div.next {
+    opacity: 0;
+    transition: opacity 0.7s ease-in;
+
+}
+
+.images-container > div.prev {
+    opacity: 0;
+    transition: opacity 0.7s ease-in;
+
+}
+
 
 .slider-dots {
     width: 100%;
@@ -136,20 +149,27 @@
     }
     .images-container > div {
         position: absolute;
-        transition: all 3s cubic-bezier(0.9, 0, 0, 1);
-        opacity: 0;
+        /* transition: all 3s cubic-bezier(0.9, 0, 0, 1); */
+        opacity: 1;
     }
     
     .images-container > div.middle {
         opacity: 1;
         transform: translateX(0);
+        transition: transform 1s cubic-bezier(0.9, 0, 0, 1);
     }
     
     .images-container > div.next {
+        opacity: 0;
         transform: translateX(100%);
+        transition: transform 1s cubic-bezier(0.9, 0, 0, 1);
+
     }
     
     .images-container > div.prev {
+        opacity: 1;
         transform: translateX(-100%);
+        transition: transform 1s cubic-bezier(0.9, 0, 0, 1);
+
     }
 }

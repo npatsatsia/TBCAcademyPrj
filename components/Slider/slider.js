@@ -38,18 +38,15 @@ class Slider {
         this.currentIndex = (this.currentIndex + 1) % containers.length;
     }
     
-    handleArrowClick(direction) {
-        const containers = document.querySelectorAll('.images-container > div');
-    
-        containers.forEach(container => container.classList.remove('opacity1'));
-    
-        if (direction === 'right') {
-            containers[(this.currentIndex === 0) ? 2 : this.currentIndex - 1].classList.add('opacity1');
-        }
-    
+    handleArrowClick(direction) {        
         if (direction === 'left') {
-            this.currentIndex = (this.currentIndex === 2) ? 0 : this.currentIndex + 1;
+            this.currentIndex = (this.currentIndex + 1) % 3;
         }
+    
+            if (direction === 'right') {
+        // this.currentIndex = (this.currentIndex - 1 + 3) % 3;
+    }
+        
     
         this.updateOpacity();
     }
@@ -76,9 +73,9 @@ class Slider {
     handleTouchEnd() {
         const swipeLength = this.startX - this.currentX;
         if (swipeLength > 50) {
-            this.handleArrowClick('left');
-        } else if (swipeLength < -50) {
             this.handleArrowClick('right');
+        } else if (swipeLength < -50) {
+            this.handleArrowClick('left');
         }
         this.isTouching = false;
     }
@@ -100,21 +97,21 @@ class Slider {
                 </div>
                 <div class="slider-container">
                     <div class="images-container">
-                        <div class="partners-trio1 opacity1">
+                        <div class="partners-trio1 middle">
                             ${this.partners_trio_1.map((partnerImgSrc) => 
-                                `<div class="partner-logo-container">
+                                `<div class="partner-logo-container ">
                                     <img src=${partnerImgSrc} alt="partner">
                                 </div>`
                             ).join('')}
                         </div>
-                        <div class="partners-trio2">
+                        <div class="partners-trio2 next">
                             ${this.partners_trio_2.map((partnerImgSrc) => 
                                 `<div class="partner-logo-container">
                                     <img src=${partnerImgSrc} alt="partner">
                                 </div>`
                             ).join('')}
                         </div>
-                        <div class="partners-single">
+                        <div class="partners-single prev">
                             <div class="partner-logo-container">
                                 <img src=${this.partners_single} alt="">
                             </div>
