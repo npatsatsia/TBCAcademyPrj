@@ -33,9 +33,12 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 36px;
     font-size: 18px;
     color: var(--text-light);
+}
+
+.burgerMenu-nav-ul li:not(:last-child) {
+    margin-bottom: 36px;
 }
 
 .burgerMenu-nav-ul li:nth-child(3) {

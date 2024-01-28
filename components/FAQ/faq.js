@@ -11,7 +11,6 @@ class FAQSection {
                             otherAnswer.classList.remove('open-answer');
                         }
                     });
-
                     let answer = question.nextElementSibling;
                     answer.classList.toggle('open-answer');
                 });

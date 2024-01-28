@@ -12,7 +12,14 @@
     
             window.onscroll = () => {
                 const currentScrollPos = window.scrollY || window.pageYOffset;
-    
+
+                if (currentScrollPos < 1 && window.innerWidth < 768) {
+                    document.querySelector('header').style.position = "relative"
+                    document.querySelector('#page-about-section').style.padding = "0"
+                }else {
+                    document.querySelector('header').style.position = "fixed"
+                }
+
                 if (prevScrollPos > currentScrollPos) {
 
                     document.querySelector('header').style.backgroundColor = "rgba(26,30,31, 1)";
