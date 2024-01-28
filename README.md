@@ -1,7 +1,7 @@
 ## TECHNOLOGIES USED:
-  **HTML5**: Used for structuring the content and layout of the web page.
-  **CSS3**: Applied for styling and presentation of the web page.
-  **JavaScript (ES6)**: Used for adding dynamic behavior and interactivity to the web page.
+  - **HTML5**: Used for structuring the content and layout of the web page.
+  - **CSS3**: Applied for styling and presentation of the web page.
+  - **JavaScript (ES6)**: Used for adding dynamic behavior and interactivity to the web page.
 
 
   
