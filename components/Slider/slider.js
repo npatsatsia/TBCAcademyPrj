@@ -142,7 +142,10 @@ class Slider {
         sliderElement.addEventListener('mouseenter', () => this.stopSlider()) // ეს ლოგიკა საიტზე შევამჩნიე
         sliderElement.addEventListener('mouseleave', () => this.startSlider())
 
-            sliderElement.addEventListener('touchstart', (e) => this.handleTouchStart(e));
+        sliderElement.querySelector('.slider-arrow-container.left').addEventListener('click', () => this.handleArrowClick('left'));
+        sliderElement.querySelector('.slider-arrow-container.right').addEventListener('click', () => this.handleArrowClick('right'));
+
+        sliderElement.addEventListener('touchstart', (e) => this.handleTouchStart(e));
         sliderElement.addEventListener('touchmove', (e) => this.handleTouchMove(e));
         sliderElement.addEventListener('touchend', () => this.handleTouchEnd());
 
